@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Jon R. Humphrey's GitHub Stats, Rank: A</title>
-        <desc id="descId">Total Stars Earned: 125, Total Commits  : 3475, Total PRs: 426, Total Issues: 107, Contributed to (last year): 13</desc>
+        <desc id="descId">Total Stars Earned: 125, Total Commits  : 3452, Total PRs: 426, Total Issues: 107, Contributed to (last year): 13</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 31.840415940439634;
+        stroke-dashoffset: 31.900954086318084;
       }
     }
   
