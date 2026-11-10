@@ -23,7 +23,7 @@ jobs:
           hide-border: true
 
       - name: Generate streak stats (dark)
-        uses: be-next/github-streak-stats-action@v1.1.0
+        uses: stats-organization/github-readme-stats-action@v2
         with:
           username: ${{ github.repository_owner }}
           token: ${{ secrets.GITHUB_TOKEN }}
