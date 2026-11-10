@@ -1,35 +1,27 @@
-name: Update Streak Stats
+name: Update README cards
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Daily
+    - cron: "0 0 * * *" # Runs once daily at midnight
   workflow_dispatch:
 
 jobs:
-  update-streak:
+  build:
     runs-on: ubuntu-latest
+
     permissions:
       contents: write
+
     steps:
       - uses: actions/checkout@v6
 
-      - name: Generate streak stats (light)
+      - name: Generate stats card
         uses: stats-organization/github-readme-stats-action@v2
         with:
-          username: ${{ github.repository_owner }}
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true
+          path: profile/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-          output-path: profile/streak-light.svg
-          theme: default
-          hide-border: true
-
-      - name: Generate streak stats (dark)
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          username: ${{ github.repository_owner }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          output-path: profile/streak-dark.svg
-          theme: tokyonight
-          hide-border: true
 
       - name: Commit changes
         run: |
